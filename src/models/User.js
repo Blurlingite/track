@@ -41,7 +41,9 @@ userSchema.pre("save", function (next) {
 });
 
 // "candidatePassword" is the password the user tries to login with
-userSchema.methods.comparePassword = function (candidatePassword) {
+userSchema.methods.comparePassword = function comparePassword(
+  candidatePassword
+) {
   // the user object in a function that uses the 'function' keyword is stored in "this"
   const user = this;
 
